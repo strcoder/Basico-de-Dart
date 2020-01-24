@@ -5,7 +5,8 @@ void main(List<String> arguments) {
   // variablesString();
   // listas();
   // coleccionesSet();
-  diccionarios();
+  // diccionarios();
+  operadores();
 }
 
 void variables () {
@@ -128,4 +129,38 @@ void diccionarios() {
 
   print(map.isEmpty);
   print(map.length);
+}
+
+void operadores() {
+  int numero = 10;
+  bool t = true;
+  String text = 'Hola';
+  String result;
+  int a = 1, b;
+
+  print(numero++ );//suma despues
+  print('$numero resultado despues de sumar');
+  print(numero--);//resta despues 
+  print('$numero resultado despues de restar');  
+  print(++numero);//suma previa imprime 11 porque se rest
+  print('$numero resultado es igual al previo debido a que se suma previamente');
+  print(--numero);//resta previa
+  print('$numero resultado es igual al previo debido a que se resta previamente');
+  print(-numero);//cambio a negativo
+  print(!t);//negacio
+  print(~numero);
+  
+  result = text == 'Hola' ? 'Mundo' : 'Dart';
+  print(result);
+
+  text = 'Adios';
+  result = text == 'Hola' ? 'Mundo' : 'Dart';
+  print(result);
+
+  print(a);
+  a ??= 5;
+  print(a);  // ??= este operador asigna a la variable si esta es nula de lo contrario la variable quedara igual
+
+  b ??= 9;
+  print(b);  // ??= este operador asigna a la variable si esta es nula de lo contrario la variable quedara igual
 }
