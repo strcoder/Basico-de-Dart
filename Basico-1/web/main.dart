@@ -3,8 +3,9 @@ import 'dart:html';
 void main(List<String> arguments) {
   // variables();
   // variablesString();
-  listas();
-  coleccionesSet();
+  // listas();
+  // coleccionesSet();
+  diccionarios();
 }
 
 void variables () {
@@ -87,7 +88,6 @@ void listas() {
 }
 
 void coleccionesSet() {
-  // Set set; // Si no se inicializa sera igual a NULL // Se inicializa con valores no definidos
   Set set; // Si no se inicializa sera igual a NULL // Se inicializa con valores no definidos
 
   set = Set.from(['Daniela', 'Antonio', 'Karen', 'Pedro', 'Juan']); // Inicializar set
@@ -101,6 +101,31 @@ void coleccionesSet() {
   set.remove('Antonio'); // Eliminar elementos dentro del set - Se debe pasar el objeto que se desea eliminar
 
   print(set);
+}
 
+void diccionarios() {
+  // Map map; // Si no se inicializa sera igual a NULL // Se inicializa con valores no definidos
+  Map<int, dynamic> map; // Si no se inicializa sera igual a NULL // Se inicializa con valores definidos
 
+  map = {
+    1: 'Rojo',
+    2: 'Azul'
+  };
+
+  print(map);
+
+  map[3] = 'Rosa'; // Asignacion en el valor 3 el valor Rosa
+
+  print(map);
+
+  map[4] = 100; // Asingacion de un entero gracias a que se definio como tipo dynamic
+
+  print(map);
+
+  map.remove(2); // Eliminar el elemento con el nombre enviado
+
+  print(map);
+
+  print(map.isEmpty);
+  print(map.length);
 }
