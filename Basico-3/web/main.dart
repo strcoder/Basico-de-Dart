@@ -3,6 +3,7 @@ import 'dart:html';
 void main() {
   expresionesCondicionales();
   switchCase();
+  expresionesFor();
 }
 
 void expresionesCondicionales() {
@@ -43,4 +44,26 @@ void switchCase() {
     default:
       print('No retorna ningun valor');
   }
+}
+
+void expresionesFor() {
+  List lista = ['Antonio', 'Karen', 'Ana', 'Luis', 'Juan'];
+  
+  for (var i = 0; i < lista.length; i++) {
+    print(lista[i]);
+  }
+
+  for (var person in lista) {
+    print(person);
+  }
+
+  // ForEach con arrow function
+  lista.forEach((person) => 
+    print(person)
+  );
+
+  // ForEach con funcion anonima
+  lista.forEach((person) {
+    print(person);
+  });
 }
