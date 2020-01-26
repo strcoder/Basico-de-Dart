@@ -5,6 +5,7 @@ void main() {
   switchCase();
   expresionesFor();
   ciclosWhileDoWhile();
+  breakContinue();
 }
 
 void expresionesCondicionales() {
@@ -86,4 +87,36 @@ void ciclosWhileDoWhile() {
     print(lista[index]);
     index++;
   } while (lista[index] != 'Karen');
+}
+
+void breakContinue() {
+  print('\n');
+  for (var i = 0; i < 4; i++) {
+    for (var j = 0; j < 4; j++) {
+      if (i == 2 && j == 1) {
+        break;
+      }
+      print('$i $j');
+    }  
+  }
+
+  print('\n');
+  for (var i = 0; i < 4; i++) {
+    for (var j = 0; j < 4; j++) {
+      if (i == 2 && j == 1) {
+        continue;
+      }
+      print('$i $j');
+    }  
+  }
+
+  print('\n');
+  forExterno: for (var i = 0; i < 4; i++) {
+    forInterno: for (var j = 0; j < 4; j++) {
+      if (i == 2 && j == 1) {
+        continue forInterno;
+      }
+      print('$i $j');
+    }  
+  }
 }
