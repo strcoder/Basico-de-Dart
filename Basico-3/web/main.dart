@@ -2,6 +2,7 @@ import 'dart:html';
 
 void main() {
   expresionesCondicionales();
+  switchCase();
 }
 
 void expresionesCondicionales() {
@@ -22,4 +23,24 @@ void expresionesCondicionales() {
    
   var nombre;
   print(nombre ?? 'invitado');
+}
+
+void switchCase() {
+  var option = 2;
+
+  switch (option) {
+    case 1:
+      print('Retornar valor $option');
+      break;
+    case 2:
+      print('Retornar valor $option');
+      continue continuaAqui;
+      break;
+    continuaAqui:
+    case 3:
+      print('Continue Retornar valor 3');
+      break;
+    default:
+      print('No retorna ningun valor');
+  }
 }
