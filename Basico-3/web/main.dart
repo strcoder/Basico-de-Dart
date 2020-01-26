@@ -4,6 +4,7 @@ void main() {
   expresionesCondicionales();
   switchCase();
   expresionesFor();
+  ciclosWhileDoWhile();
 }
 
 void expresionesCondicionales() {
@@ -66,4 +67,23 @@ void expresionesFor() {
   lista.forEach((person) {
     print(person);
   });
+}
+
+void ciclosWhileDoWhile() {
+  var lista = ['Antonio', 'Karen', 'Juan'];
+
+  var index = 0;
+
+  print('\nSentencia While');
+  while (lista[index] != 'Karen') {
+    print(lista[index]);
+    index++;
+  }
+
+  index = 0;
+  print('\nSentencia Do-While');
+  do {
+    print(lista[index]);
+    index++;
+  } while (lista[index] != 'Karen');
 }
