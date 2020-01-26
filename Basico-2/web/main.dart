@@ -9,6 +9,10 @@ void main() {
   print(suma(5, 3));
   arrowSuma(3, 5);
   print(arrowRetrunSuma(3, 5));
+  paramsRequired(3, 5);
+  paramsOp(3);
+  paramsOpNamed(3, b: 5);
+  paramsOpNamedDefect(3);
 
   // Funciones Lambda 
   List<String> list = ['Azul', 'Rojo', 'Blaco'];
@@ -38,3 +42,23 @@ void arrowSuma(int a, int b) => print('El resultado es: ${a + b}');
 
 //Arrow Functions con retorno de valor
 int arrowRetrunSuma(int a, int b) => a + b;
+
+// Funciones con parametros requeridos
+void paramsRequired(int a, int b) {
+  print('${a} + ${b}');
+}
+
+// Funciones con parametros opcionales
+void paramsOp(int a, [int b]) {
+  print('${a} + ${b ?? 5}');
+}
+
+// Funciones con parametros opcionales nombrados
+void paramsOpNamed(int a, {int b}) {
+  print('${a} + ${b}');
+}
+
+// Funciones con parametros opcionales por defecto 
+void paramsOpNamedDefect(int a, {int b = 5}) {
+  print('${a} + ${b}');
+}
