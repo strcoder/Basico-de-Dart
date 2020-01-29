@@ -5,6 +5,7 @@ class Frontend extends Developer{
 
   Frontend(int id, String name, int salary, this.framework): super(id, name, salary);
   
+  @override
   void skill() {
     print('El Frontend trabaja con el framework de ${framework}');
   }
