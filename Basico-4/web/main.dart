@@ -1,5 +1,10 @@
 import 'dart:html';
 
+import 'backend.dart';
+import 'empleado.dart';
+import 'frontend.dart';
+import 'persona.dart';
+
 void main() {
   // Creacion de objeto de tipo empleado
   var empleado = Empleado(123, 'Karen');
@@ -23,36 +28,24 @@ void main() {
 
   empleado3.cumplioHorario() ? empleado3.trabajar() : print('El empleado no tabajo');
 
-}
+  var persona = Persona();
 
-// Calse empleado
-class Empleado {
-  var id;
-  var name;
-  var trabajo;
+  // No se pueden acceder a las variables privadas dentro de otros archivos
+  // persona._horas = 00;
 
-  // Constructor por defecto
-  // Empleado() {
-  //   print('Hola soy un empleado');
-  // }
+  persona.horas = 35;
 
-  // Constructor con parametros
-  // Empleado(int id, String name) {
-  //   this.id = id;
-  //   this.name = name;
-  // }
+  print('La persona ${persona.name} tiene ${persona.horas}');
 
-  // Constructor con parametros
-  Empleado(this.id, this.name);
+  var frontend = Frontend(1234, 'Karen', 200, 'ReactJs');
 
-  // Constructor por nombre
-  Empleado.trabajo(this.id, this.name, this.trabajo);
+  frontend.salarioSemanal();
 
-  bool cumplioHorario() {
-    return trabajo;
-  }
+  frontend.skill();
 
-  void trabajar() {
-    print('El empleado $name realizo su trabajo');
-  }
+  var backend = Backend(1290, 'Antonio', 150, 'MongoDB');
+
+  backend.salarioSemanal();
+
+  backend.skill();
 }
