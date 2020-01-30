@@ -1,7 +1,11 @@
 class Empleado {
   var id;
   var name;
-  var trabajo;
+  var salario;
+
+  Empleado(this.id, this.name);
+
+  void calcularSalario() => print('El salario del empleado $name es ${salario * 5}');
 
   // Constructor por defecto
   // Empleado() {
@@ -15,16 +19,16 @@ class Empleado {
   // }
 
   // Constructor con parametros
-  Empleado(this.id, this.name);
+  // Empleado(this.id, this.name);
 
-  // Constructor por nombre
-  Empleado.trabajo(this.id, this.name, this.trabajo);
+  // // Constructor por nombre
+  // Empleado.trabajo(this.id, this.name, this.trabajo);
 
-  bool cumplioHorario() {
-    return trabajo;
-  }
+  // bool cumplioHorario() {
+  //   return trabajo;
+  // }
 
-  void trabajar() {
-    print('El empleado $name realizo su trabajo');
-  }
+  // void trabajar() {
+  //   print('El empleado $name realizo su trabajo');
+  // }
 }
